@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './AddStudentForm.css'
 import { Link } from 'react-router-dom';
-
 const AddStudentForm = () => {
   const [studentName, setStudentName] = useState('');
   const [subjectName, setSubjectName] = useState(''); // State to hold subjectKey
@@ -29,40 +28,40 @@ const AddStudentForm = () => {
   };
 
   return (
-    <div class="add-student-form">
-    <h2>Add New Student</h2>
-    <form onSubmit={handleSubmit}>
+    <div>
+      <h2>Add New Student</h2>
+      <form onSubmit={handleSubmit}>
         <label>
-            Student Name:
-            <input
-                type="text"
-                value={studentName}
-                onChange={(e) => setStudentName(e.target.value)}
-                required
-            />
+          Student Name:
+          <input
+            type="text"
+            value={studentName}
+            onChange={(e) => setStudentName(e.target.value)}
+            required
+          />
         </label>
         <label>
-            Subject Name:
-            <input
-                type="text"
-                value={subjectName}
-                onChange={(e) => setSubjectName(e.target.value)}
-                required
-            />
+          Subject Name:
+          <input
+            type="text"
+            value={subjectName}
+            onChange={(e) => setSubjectName(e.target.value)}
+            required
+          />
         </label>
         <label>
-            Grade:
-            <input
-                type="number"
-                value={grade}
-                onChange={(e) => setGrade(e.target.value)}
-                required
-            />
+          Grade:
+          <input
+            type="number"
+            value={grade}
+            onChange={(e) => setGrade(e.target.value)}
+            required
+          />
         </label>
         <button type="submit">Add Student</button>
-        <div className='b1'><Link to="/studentlist">Students List</Link></div>
-    </form>
-</div>
+        <div><Link to="/studentlist">Students List</Link></div>
+      </form>
+    </div>
   );
 };
 
