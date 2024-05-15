@@ -1,0 +1,53 @@
+.homepage{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 150px;
+    gap: 30px;
+}
+body{
+    background-color:bisque;
+}
+.buttons{
+    display: flex;
+    gap: 45px;
+}
+
+.badd{
+    width:140px;
+    height: 40px;
+    background-color: rgb(235, 46, 46);
+    color:white;
+    border: 0.5px;
+    border-color: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.badd > a{
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+.b1 > a {
+    color: rgb(255, 255, 255); 
+    text-decoration: none; 
+    font-weight: bold; 
+    
+  }
+  
+    .b1{
+        width:125px;
+        height: 40px;
+        background-color: rgb(235, 46, 46);
+        color:white;
+        border: 0.5px;
+        border-color: white;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 5px;
+    }
+  

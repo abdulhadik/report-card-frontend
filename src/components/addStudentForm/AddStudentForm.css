@@ -1,0 +1,55 @@
+.add-student-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .add-student-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-student-form form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .add-student-form form input[type="text"],
+  .add-student-form form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Ensures padding is included in width */
+  }
+  
+  .add-student-form form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .add-student-form form button:hover {
+    background-color: #45a049;
+  }
+  
+  .add-student-form .b1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .add-student-form .b1 a {
+    text-decoration: none;
+    color: #ffffff;
+  }
+  
