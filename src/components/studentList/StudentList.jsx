@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './StudentList.css'
 import { Link } from 'react-router-dom';
-
 const StudentList = () => {
   const [students, setStudents] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
@@ -50,32 +49,30 @@ const StudentList = () => {
       />
       <select value={filter} onChange={handleFilterChange}>
         <option value="all">All Students</option>
-        <option value="pass">Passed Students</option>
-        <option value="fail">Failed Students</option>
+        <option value="pass">Passing Students</option>
+        <option value="fail">Failing Students</option>
       </select>
-      <div className='b2'><Link to="/addstudent"> Add Student</Link></div>
-      <table class="student-table">
-      <thead>
+      <div><Link to="/addstudent"> Add Student</Link></div>
+      <table>
+        <thead>
           <tr>
-              <th>Student Name</th>
-              <th>Subject Name</th>
-              <th>Grade</th>
-              <th>Remarks</th>
+            <th>Student Name</th>
+            <th>Subject Name</th>
+            <th>Grade</th>
+            <th>Remarks</th>
           </tr>
-      </thead>
-      <tbody>
+        </thead>
+        <tbody>
           {filteredStudents.map((student) => (
-              <tr key={student.studentKey}>
-                  <td>{student.studentName}</td>
-                  <td>{student.subjectName}</td>
-                  <td>{student.grade}</td>
-                  <td class="{student.grade >= 75 ? 'pass' : 'fail'}">
-                      {student.grade >= 75 ? 'PASS' : 'FAIL'}
-                  </td>
-              </tr>
+            <tr key={student.studentKey}>
+              <td>{student.studentName}</td>
+              <td>{student.subjectName}</td>
+              <td>{student.grade}</td>
+              <td>{student.grade >= 75 ? 'PASS' : 'FAIL'}</td>
+            </tr>
           ))}
-      </tbody>
-  </table>
+        </tbody>
+      </table>
     </div>
   );
 };
